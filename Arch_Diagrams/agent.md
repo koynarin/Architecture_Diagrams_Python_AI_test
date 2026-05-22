@@ -311,9 +311,9 @@ Each diagram generation produces 3 files:
 ## Example Diagrams Created
 
 ### 1. Contoso Architecture (Manual)
-- **File**: `contoso_architecture.py`
+- **File**: `contoso_architecture2.py`
 - **Components**: VNet, 3 subnets, Front Door, App Gateway, Web App, Function App, Service Bus, SQL, Storage, Key Vault
-- **Output**: `diagrams/contoso_architecture.*`
+- **Output**: `diagrams/contoso_architecture2.*`
 
 ### 2. Terraform Demo (Auto-parsed)
 - **Source**: `terraform-demo/main.tf`

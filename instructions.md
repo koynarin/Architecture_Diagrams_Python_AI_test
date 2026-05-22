@@ -19,6 +19,7 @@ Resources:
    - Application Gateway (WAF): "agw-contoso" in frontend subnet
    - App Service Plan: "asp-contoso-prod"
    - Web App: "app-frontend-portal"
+   - Web App2: "app-koy-test"
 
 3. **Application Tier**
    - Internal App Service Plan: "asp-contoso-backend"
@@ -39,6 +40,7 @@ Resources:
 
 Connections:
 - Users → Front Door → Application Gateway → Web App
+- Web App → Order API
 - Web App → Order API
 - Order API → SQL DB and Storage (private endpoints)
 - Function App → Service Bus → SQL
