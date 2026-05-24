@@ -4,7 +4,7 @@ Generates PNG, DOT, and Draw.io diagrams for the requested VNet/subnet architect
 """
 
 import subprocess
-from diagrams import Diagram, Cluster, Edge, Custom
+from diagrams import Diagram, Cluster, Edge, Node
 from diagrams.azure.compute import AppServices, FunctionApps
 from diagrams.azure.network import (
     ApplicationGateway,
@@ -107,9 +107,9 @@ with Diagram(
             sql_db = SQLDatabases("sqldb-orders")
             storage = StorageAccounts("stcontosodata001")
             key_vault = KeyVaults("kv-contoso-prod")
-            pe_sql = Custom("pe-sql\n(SQL Private Endpoint)")
-            pe_storage = Custom("pe-storage\n(Storage Private Endpoint)")
-            pe_keyvault = Custom("pe-keyvault\n(Key Vault Private Endpoint)")
+            pe_sql = Node("pe-sql\n(SQL Private Endpoint)")
+            pe_storage = Node("pe-storage\n(Storage Private Endpoint)")
+            pe_keyvault = Node("pe-keyvault\n(Key Vault Private Endpoint)")
 
         with Cluster("Firewall & Routing", graph_attr=firewall_cluster_attr):
             azfw = Firewall("azfw-contoso\n(Azure Firewall)")
